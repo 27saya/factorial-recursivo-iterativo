@@ -8,7 +8,7 @@ Proceso en Python:
 
 3. Metodos para medir el tiempo de ejecución y memoria:
    - Tiempo de ejecución: Utilicé time.perf_counter() para registrar el tiempo antes y despues de ejecutar cada función, asi obteniendo la duración.
-   - Uso de memoria: Utilice la librería memory_profiler y la función memory_usage() para registrar la memoria usada antes yb despues de usar cada función.
+   - Uso de memoria: Utilicé la librería memory_profiler y la función memory_usage() para registrar la memoria usada antes yb despues de usar cada función.
 
 4. Resumen de hallazgos: El metodo iterativo fue consistentemente mas rapido que el recursivo, notandose incluso mas en valores mas grandes de n. El metodo recursivo consumió mas memoria.
 En cuanto a las graficas, vemos que en la de tiempo, el metodo iterativo crece mas lentamente a medida que n va aumentando, mientras que en la grafica de memoria, el recursivo presenta un consumo mayor e irregular, nada similar al iterativo, donde vemos que es mas estable.
