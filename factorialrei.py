@@ -13,37 +13,37 @@ import time
 import matplotlib.pyplot as plt
 from memory_profiler import memory_usage
 
-# Recursivo
+#Recursivo
 def facto_r(n):
-    if n <= 1:
+    if n<=1:
         return 1
     else:
-        return n * facto_r(n - 1)
+        return n*facto_r(n-1)
 
-# Iterativo
+#Iterativo
 def facto_i(n):
-    resultado = 1
-    for i in range(2, n + 1):
-        resultado *= i
+    resultado=1
+    for i in range(2, n+1):
+        resultado*= i
     return resultado
 
 def medir(func, n):
-    inicio_t = time.perf_counter()
-    mem_inicial = memory_usage()[0]
+    inicio_t=time.perf_counter()
+    mem_inicial=memory_usage()[0]
     func(n)
-    mem_final = memory_usage()[0]
-    fin_t = time.perf_counter()
-    tiempo = fin_t - inicio_t
-    memoria = mem_final - mem_inicial
+    mem_final=memory_usage()[0]
+    fin_t=time.perf_counter()
+    tiempo=fin_t-inicio_t
+    memoria=mem_final-mem_inicial
     return tiempo, memoria
 
-valores_n = [5, 50, 100, 200, 300, 500]
-tiempos_r, tiempos_i = [], []
-memorias_r, memorias_i = [], []
+valores_n=[5, 50, 100, 200, 300, 500]
+tiempos_r, tiempos_i=[], []
+memorias_r, memorias_i=[], []
 
 for n in valores_n:
-    t_r, m_r = medir(facto_r, n)
-    t_i, m_i = medir(facto_i, n)
+    t_r, m_r=medir(facto_r, n)
+    t_i, m_i=medir(facto_i, n)
     tiempos_r.append(t_r)
     tiempos_i.append(t_i)
     memorias_r.append(m_r)
