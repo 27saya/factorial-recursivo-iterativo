@@ -1,7 +1,5 @@
 # factorial-recursivo-iterativo
 
-Proceso en Python:
-
 1. Proposito de la tarea: El proposito de esta tarea fue evaluar y comparar la eficicncia de dos formas diferentes de calcular el factorial de un mismo número usando el metodo recursivo (facto_r) y el metodo iterativo (facto_i). Nos centramos en el tiempo de ejecucion y el uso de la memoria para ver cual de los dos es mas eficiente segun n (el numero a calcular).
    
 2. ¿Como se implementaron las funciones?: Para el facto_r, la funcion se llama a si misma reduciendo el valor de n cada vez mas hasta llegar al caso n<=1, donde retorna 1, mientras que para el facto_i, se utiliza un bucle for para multiplicar los números desde 2 hasta n, acumulando el resultado en una variable con el mismo nombre.
